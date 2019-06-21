@@ -1,4 +1,4 @@
-This repo contains the data used for "The Market for Data Privacy" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
+This repo contains the data used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
 
 The published data consists of privacy policies, attributes of those policies, 
 and measures of third-party sharing behavior
@@ -45,7 +45,11 @@ print(output[example_url][lemmas][0:2]
 
 The file *attributes.csv* contains the policy attributes used in the paper, which are... TODO describe
 
-### 3. Third-party sharing behavior
+### 3. Expert evaluation training data
+
+The file *expert.csv* contains...
+
+### 4. Third-party sharing behavior
 
 The file *tpsharing.csv* contains the measures of third-party sharing used in the paper. 
 This is based on measurements we did on *privacyscore.org*, which in turn uses the OpenWPM
@@ -53,11 +57,22 @@ crawler developed by Steven Englehardt and Arvind Narayanan (see: https://github
 
 # Code
 
+The folder *src* contains python functions that allow you to scrape privacy policies, 
+clean them, calculate their attributes. 
 
+You can also calculate the legal clarity of these policies
+using automated classifiers (saved in *clfs*)
+that are based on our expert evaluation.
 
-We are working on end-to-end code that will allow you to measure third-party behavior. 
+The Jupyter notebook *demo.ipynb* has a full demo. 
 
+We are also working on end-to-end code that will allow you to measure third-party behavior
+using OpenWPM as a dependency. 
+For now, we publish code that scrapes results from *privacyscore.org*, as we did for the paper.
 
+**Important:** To run the part of the code that performs an automated Google search, you will need credentials 
+for Google's Custom Search Engine. To set this up with your Google account, follow the instructions
+at: TODO 
 
 # Citation
 

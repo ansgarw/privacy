@@ -47,6 +47,16 @@ The file *attributes.csv* contains the policy attributes used in the paper, whic
 
 ### 3. Third-party sharing behavior
 
+The file *tpsharing.csv* contains the measures of third-party sharing used in the paper. 
+This is based on measurements we did on *privacyscore.org*, which in turn uses the OpenWPM
+crawler developed by Steven Englehardt and Arvind Narayanan (see: https://github.com/mozilla/OpenWPM)
+
+# Code
+
+
+
+We are working on end-to-end code that will allow you to measure third-party behavior. 
+
 
 
 # Citation

@@ -1,4 +1,4 @@
-This repo contains the data used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
+This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
 The published data consists of privacy policies, attributes of those policies, 
 and measures of third-party sharing behavior
 for the sample of firms from Compustat US used in the paper.

@@ -66,7 +66,7 @@ To set this up with your Google account,
 [follow the instructions here](https://developers.google.com/custom-search/v1/overview). 
 For more than 100 queries in a day, Google will charge you $5 per 1000 queries, 
 but first-time users get 
-free credit (we didn't need to pay anything to write the paper, for example).
+free credit (enough to write our paper, for example).
 
 We provide Python scripts that scrape privacy policies from arbitrary lists of websites, 
 clean them, and calculate their attributes. 

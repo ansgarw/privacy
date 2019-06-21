@@ -57,22 +57,29 @@ crawler developed by Steven Englehardt and Arvind Narayanan (see: https://github
 
 # Code
 
-The folder *src* contains python functions that allow you to scrape privacy policies, 
-clean them, calculate their attributes. 
+The easiest way to use our code is to run the Jupyter notebook *demo.ipynb*, and adapt the demo for your needs.
+
+We provide Python scripts that scrape privacy policies, 
+clean them, and calculate their attributes. 
 
 You can also calculate the legal clarity of these policies
 using automated classifiers (saved in *clfs*)
 that are based on our expert evaluation.
 
-The Jupyter notebook *demo.ipynb* has a full demo. 
-
-We are also working on end-to-end code that will allow you to measure third-party behavior
+We are working on end-to-end code that will allow you to measure third-party behavior
 using OpenWPM as a dependency. 
-For now, we publish code that scrapes results from *privacyscore.org*, as we did for the paper.
+For now, we publish code that scrapes results from lists
+of urls submitted to *privacyscore.org*, as we did for the paper.
+You can submit your own list at [here](https://privacyscore.org/list/create/) and use our 
+code once the list has been scanned.
 
 **Important:** To run the part of the code that performs an automated Google search, you will need credentials 
 for Google's Custom Search Engine. To set this up with your Google account, follow the instructions
 at: TODO 
+
+
+
+
 
 # Citation
 

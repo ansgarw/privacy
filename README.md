@@ -60,6 +60,14 @@ crawler developed by Steven Englehardt and Arvind Narayanan (see: https://github
 
 The easiest way to use our code is to run the Jupyter notebook *demo.ipynb*, and adapt the demo for your needs.
 
+**Setup:** To run the part of the code that performs an automated Google search, you will need credentials 
+for Google's Custom Search Engine. In particular, you need a Search Engine ID and an API Key. 
+To set this up with your Google account, 
+[follow the instructions here](https://developers.google.com/custom-search/v1/overview). 
+For more than 100 queries in a day, Google will charge you $5 per 1000 queries, 
+but first-time users get 
+free credit (we didn't need to pay anything to write the paper, for example).
+
 We provide Python scripts that scrape privacy policies from arbitrary lists of websites, 
 clean them, and calculate their attributes. 
 
@@ -73,14 +81,6 @@ For now, we publish code that scrapes results from lists
 of urls submitted to *privacyscore.org*, as we did for the paper.
 You can [submit your own list here](https://privacyscore.org/list/create/) 
 and use our code once your list has been scanned.
-
-**Important:** To run the part of the code that performs an automated Google search, you will need credentials 
-for Google's Custom Search Engine. In particular, you need a Search Engine ID and an API Key. 
-To set this up with your Google account, 
-[follow the instructions here](https://developers.google.com/custom-search/v1/overview). 
-For more than 100 queries in a day, Google will charge you $5 per 1000 queries, 
-but first-time users get 
-free credit (we didn't need to pay anything to write the paper, for example).
 
 # Citation
 

@@ -1,4 +1,4 @@
-This repo contains the data used for "The Market for Data Privacy" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther.
+This repo contains the data used for "The Market for Data Privacy" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
 
 The published data consists of privacy policies, attributes of those policies, 
 and measures of third-party sharing behavior
@@ -6,6 +6,8 @@ for the sample of firms from Compustat US used in the paper.
 
 The Python code allows users to scrape and clean similar data 
 for use in research on other firms and institutions in English-speaking countries.
+
+If you use either the code or the data in your work, please cite our paper (see bibtex citation below).
 
 
 # Published Data
@@ -19,7 +21,7 @@ The file *output.json* contains the scraped text of each firm's privacy policy, 
 It further contains a lemmatized version of each policy, which is saved as a nested list: 
 one list of lemmas for each paragraph. 
 
-The text has been preprocessed... TODO describe
+The text and lemmas have been preprocessed... TODO describe
 
 The following examples show how to extract information from this file using Python:
 
@@ -27,8 +29,16 @@ The following examples show how to extract information from this file using Pyth
 
 import json
 with open('output.json','r') as f:
-  output = json.load(f)
+    output = json.load(f)
 
+# example: american airlines
+example_url = 'www.aa.com'
+
+# get first 2 paragraphs of text
+print(output[example_url][policy][0:2]
+
+# get the equivalent lemmas
+print(output[example_url][lemmas][0:2]
 ```
 
 ### 2. Policy attributes
@@ -40,8 +50,6 @@ The file *attributes.csv* contains the policy attributes used in the paper, whic
 
 
 # Citation
-
-If you use either the code or the data, please cite our paper:
 
 ```
 @article{ramadorai2019market,

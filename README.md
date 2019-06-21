@@ -6,7 +6,7 @@ for the sample of firms from Compustat US used in the paper.
 The Python code allows you to scrape and clean similar data 
 for use in research on other firms and institutions in English-speaking countries.
 
-If you use this, please cite our paper (see bibtex citation below).
+If you use this, please cite our paper (see bibtex below).
 
 # Published Data
 

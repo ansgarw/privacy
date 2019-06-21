@@ -1,14 +1,12 @@
 This repo contains the data used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
-
 The published data consists of privacy policies, attributes of those policies, 
 and measures of third-party sharing behavior
 for the sample of firms from Compustat US used in the paper.
 
-The Python code allows users to scrape and clean similar data 
+The Python code allows you to scrape and clean similar data 
 for use in research on other firms and institutions in English-speaking countries.
 
-If you use either the code or the data in your work, please cite our paper (see bibtex citation below).
-
+If you use this, please cite our paper (see bibtex citation below).
 
 # Published Data
 
@@ -45,9 +43,12 @@ print(output[example_url][lemmas][0:2]
 
 The file *attributes.csv* contains the policy attributes used in the paper, which are... TODO describe
 
-### 3. Expert evaluation training data
+### 3. Expert evaluation
 
-The file *expert.csv* contains...
+The file *expert.csv* contains 
+the evaluations of a legal expert of a sample of policies. 
+Details of expert's criteria are in the paper.
+These evaluations form the basis of our legal clarity index.
 
 ### 4. Third-party sharing behavior
 

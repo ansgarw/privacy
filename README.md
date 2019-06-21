@@ -71,8 +71,8 @@ We are working on end-to-end code that will allow you to measure third-party beh
 using OpenWPM as a dependency. 
 For now, we publish code that scrapes results from lists
 of urls submitted to *privacyscore.org*, as we did for the paper.
-You can submit your own list at [here](https://privacyscore.org/list/create/) and use our 
-code once the list has been scanned.
+You can [submit your own list here](https://privacyscore.org/list/create/) 
+and use our code once the list has been scanned.
 
 **Important:** To run the part of the code that performs an automated Google search, you will need credentials 
 for Google's Custom Search Engine. To set this up with your Google account, follow the instructions

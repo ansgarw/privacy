@@ -15,7 +15,14 @@ These evaluations form the basis of our legal clarity index. This data has `webu
 1. `src/urls.py` contains tools that find candidate URLs for privacy policies on a given website.
 2. `src/text.py` contains tools that download privacy policies (given candidate URLs) and cleans them for natural language processing. 
 3. `src/attributes.py` contains tools that calculate the attributes of privacy policies (visibility, length, readability, legal clarity) as used in the paper.
+
 (these modules call on `src/utils.py` which contains various auxiliary functions)
+
+**Note** Our paper and the published data also contain measures of third-party tracking activity. 
+We obtained these data manually by uploading lists of websites to www.privacyscore.org, 
+which in turn uses the OpenWPM software developed by Englehardt and Narayanan (see https://github.com/mozilla/OpenWPM). 
+
+We are working on a simple, end-to-end module that automates this process. Watch this space!
 
 ## Simplest Example
 Here are 5 lines of code that find the policy for American Airlines:
@@ -40,7 +47,7 @@ plt.imshow(wc); plt.axis('off')
 ![wordcloud](aa_wc.png)
 
 
-# Citation
+## Citation
 
 ```
 @article{ramadorai2019market,

@@ -1,8 +1,10 @@
-This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
+This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther (Imperial College London). 
 The easiest way to see the structure of our data and Python code is to look at 
 the Jupyter notebooks `demoData.ipynb` and `demoCode.ipynb`. 
 
 If you use these resources in your own work, please cite our paper (bibtex below).
+
+We welcome any suggestions on how to improve our approach! You can contact us at: a.walther@imperial.ac.uk
 
 ## Data
 1. `data/attributes.csv` contains the privacy attributes of all US firms in our sample. This data contains identifiers `gvkey` that can be used to merge it with Compustat data, and `weburl` for the website of each firm. 
@@ -22,7 +24,7 @@ These evaluations form the basis of our legal clarity index. This data has `webu
 We obtained these data manually by uploading lists of websites to www.privacyscore.org, 
 which in turn uses the OpenWPM software developed by Englehardt and Narayanan (see https://github.com/mozilla/OpenWPM). 
 
-We are working on a simple, end-to-end module that automates this process. Watch this space!
+We are working on a simple, end-to-end module that automates this process. Please contact us if you are interested.
 
 ## Simplest Example
 Here are 5 lines of code that find the policy for American Airlines:

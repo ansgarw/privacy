@@ -1,13 +1,13 @@
 import requests
 import re
-import enchant
 from bs4 import BeautifulSoup
 from urlparse import urljoin 
 from boilerpipe.extract import Extractor
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-english_dict = enchant.Dict("en_US")       
+# import enchant -- TODO bring this back while still using binder?
+# english_dict = enchant.Dict("en_US")       
 
 # find onward links from a url
 def onward_links(url,domain_name):
@@ -85,8 +85,8 @@ def get_tokens(string):
     tokens = word_tokenize(newstr)
     # remove stop words
     tokens = [word.lower() for word in tokens if not word.lower() in stopwords.words('english')]
-    # remove non english words
-    tokens = [word for word in tokens if english_dict.check(word)]
+    # remove non english words -- removed because enchant does not work with binder -- TODO bring back?  
+#     tokens = [word for word in tokens if english_dict.check(word)]
     return tokens
 
 # lemmatize list of tokens

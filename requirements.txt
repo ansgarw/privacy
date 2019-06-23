@@ -5,6 +5,5 @@ ReadabilityCalculator==0.2.37
 google-api-python-client==1.7.4
 requests==2.18.4
 commonregex==1.5.4
-pyenchant==2.0.0
 urllib3==1.22
 nltk==3.3

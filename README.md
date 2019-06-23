@@ -1,22 +1,24 @@
 This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
-
 The easiest way to see the structure of our data and Python code is to look at 
 the Jupyter notebooks `demoData.ipynb` and `demoCode.ipynb`. 
 
-The published data consists of three files
+If you use these resources in your own work, please cite our paper (bibtex below).
+
+## Data
 1. `data/attributes.csv` contains the privacy attributes of all US firms in our sample. This data contains identifiers `gvkey` that can be used to merge it with Compustat data, and `weburl` for the website of each firm. 
 2. `data/policies.json` contains the full text of all privacy policies we found in this sample is in . Each policy is saved as a list of paragraphs. This data has `weburl` identifiers.
 3. `data/expert.csv` contains the evaluations of a legal expert for a smaller sample of policies are in . This data has 
 Details of expert's criteria are in the paper.
 These evaluations form the basis of our legal clarity index. This data has `weburl` identifiers.
 
-The code consists of three Python modules 
+## Python Modules
 1. `src/urls.py` contains tools that find candidate URLs for privacy policies on a given website.
 2. `src/text.py` contains tools that download privacy policies (given candidate URLs) and cleans them for natural language processing. 
 3. `src/attributes.py` contains tools that calculate the attributes of privacy policies (visibility, length, readability, legal clarity) as used in the paper.
 (these modules call on `src/utils.py` which contains various auxiliary functions)
 
-For the simplest example, here are 5 lines of code that find the policy for American Airlines:
+## Simplest Example
+Here are 5 lines of code that find the policy for American Airlines:
 
 ```
 from src.urls import crawlPrivacy, filterPrivacy

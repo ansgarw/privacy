@@ -1,4 +1,19 @@
 This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther. 
+
+The easiest way to see the structure of our data and Python code is to look at 
+the Jupyter notebooks `demoData.ipynb` and `demoCode.ipynb`. 
+
+The data consists of 3 files
+1. The privacy attributes of all US firms in our sample in `data/attributes.csv`. This data contains identifiers `gvkey` that can be used to merge it with Compustat data, and `weburl` for the website of each firm.
+2. The full text of all privacy policies we found in this sample is in `data/policies.json`. Each policy is saved as a list of paragraphs. This data has `weburl` identifiers.
+3. The evaluations of a legal expert for a smaller sample of policies are in `data/expert.csv`. This data has 
+Details of expert's criteria are in the paper.
+These evaluations form the basis of our legal clarity index. This data has `weburl` identifiers.
+
+The code consists of 3 Python modules 
+1. `src/urls.py` contains functions that find candidate URLs for privacy policies, using a root website (such as 'www.aa.com') as an input.
+2. `src/text.py` 
+
 The published data consists of privacy policies, attributes of those policies, 
 and measures of third-party sharing behavior
 for the sample of firms from Compustat US used in the paper.

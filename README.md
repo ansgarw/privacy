@@ -1,7 +1,7 @@
 # The Market for Data Privacy: Data and Code
 
 ### Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther 
-### Imperial College London)
+#### Imperial College London
 
 This repo contains the data and code used for [our research paper](https://www.ssrn.com/abstract=3352175).
 

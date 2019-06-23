@@ -1,6 +1,4 @@
 This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther (Imperial College London). 
-The easiest way to see the structure of our data and Python code is to look at 
-the Jupyter notebooks `demoData.ipynb` and `demoCode.ipynb`. 
 
 If you use these resources in your own work, please cite our paper (bibtex below).
 
@@ -15,7 +13,10 @@ These evaluations form the basis of our legal clarity index. This data has `webu
 
 See the paper for detailed definitions of our sample and variables. 
 
-## Python Modules
+## Python Code
+The easiest way to use our code is to run the Jupyter notebook `demo.ipynb` and adapt it to your needs.
+
+Our code consists of the following modules:
 1. `src/urls.py` contains tools that find candidate URLs for privacy policies on a given website.
 2. `src/text.py` contains tools that download privacy policies (given candidate URLs) and cleans them for natural language processing. 
 3. `src/attributes.py` contains tools that calculate the attributes of privacy policies (visibility, length, readability, legal clarity) as used in the paper.

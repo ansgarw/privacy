@@ -7,7 +7,7 @@ If you use these resources in your own work, please cite our paper (bibtex below
 We welcome any suggestions on how to improve our approach! You can contact us at: a.walther@imperial.ac.uk
 
 ## Data
-1. `data/attributes.csv` contains the privacy attributes of all US firms in our sample: Whether we found a privacy policy (*found*), whether this policy is visible (*visible*), its length (*paragraphs, words*), its Fog readability (*fog*), the overall legal clarity index (*overall*), and the number of third-party tracking cookies on its website (*tptrackingcookies*). All variables are defined in the oaoer. The data has identifiers `gvkey` that can be used to merge it with Compustat data, as well as `weburl` identifiers for the website of each firm. 
+1. `data/attributes.csv` contains the privacy attributes of all Compustat US firms: Whether we found a privacy policy (*found*), whether this policy is visible (*visible*), its length (*paragraphs, words*), its Fog readability (*fog*), the overall legal clarity index (*overall*), and the number of third-party tracking cookies on its website (*tptrackingcookies*). All variables are defined in the oaoer. The data has identifiers `gvkey` that can be used to merge it with Compustat data, as well as `weburl` identifiers for the website of each firm. 
 2. `data/policies.json` contains the full text of all privacy policies we found in this sample is in . Each policy is saved as a list of paragraphs. This data has `weburl` identifiers.
 3. `data/expert.csv` contains the evaluations of a legal expert for a smaller sample of policies are in . This data has 
 Details of expert's criteria are in the paper.

@@ -1,4 +1,9 @@
-This repo contains the data and code used for our research paper: "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther (Imperial College London). 
+# "[The Market for Data Privacy](https://www.ssrn.com/abstract=3352175)" 
+
+### Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther 
+### Imperial College London)
+
+This repo contains the data and code used for our research paper (https://www.ssrn.com/abstract=3352175).
 
 If you use these resources in your own work, please cite our paper (bibtex below).
 

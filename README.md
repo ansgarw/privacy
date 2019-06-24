@@ -20,6 +20,10 @@ See the paper for detailed definitions of our sample and variables.
 ## Python Code
 The easiest way to use our code is to run the Jupyter notebook `demo.ipynb` and adapt it to your needs.
 
+The code runs in Python 3 after cloning the repository and running `pip install -r requirements.txt`. 
+
+For easy compatibility, we have also created a Docker image (instructions below). 
+
 Our code consists of the following modules:
 1. `src/urls.py` contains tools that find candidate URLs for privacy policies on a given website.
 2. `src/text.py` contains tools that download privacy policies (given candidate URLs) and clean them for natural language processing. 
@@ -54,6 +58,19 @@ plt.imshow(wc); plt.axis('off')
 ```
 
 ![wordcloud](aa_wc.png)
+
+## Docker instructions
+
+To use this, [install Docker](https://docs.docker.com) 
+and run
+
+```docker pull ansgarw/privacydocker```
+
+Then, to open our Juypter notebook in this Docker image, run
+
+```docker run -p 8888:8888 -v "DIR"/privacy:/home/jovyan privacydocker:latest```
+
+where you need to replace "DIR" with the local path into which you've cloned the repository.
 
 
 ## Citation

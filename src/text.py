@@ -2,9 +2,9 @@ from .utils import get_paragraphs, get_tokens, get_lemmas
 
 # download first valid policy from a ranked list of urls 
 def findPolicy(ranked, **kwargs):
-    for url in ranked:        
+    for url in ranked:
         if not url.endswith('.pdf'):
-            pars = get_paragraphs(url,**kwargs)
+            status, pars = get_paragraphs(url,**kwargs)
             if 'privacy' in ' '.join(pars).lower(): 
                 return True, pars, url
     return False, None, None

@@ -1,13 +1,16 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-from urlparse import urljoin 
-from boilerpipe.extract import Extractor
+from bs4.element import Comment
+from urllib.parse import urljoin 
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-# import enchant -- TODO bring this back while still using binder?
-# english_dict = enchant.Dict("en_US")       
+
+    
 
 # find onward links from a url
 def onward_links(url,domain_name):
@@ -28,7 +31,7 @@ def get_html(url):
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'}
         html = requests.get(url, headers=headers, timeout=5).text
     except Exception as e:
-        return False, e
+        return False, str(e)
     return True, html
 
 # find all links in a html document
@@ -69,12 +72,32 @@ def unique(url_list):
 
 # extract text from url and organise into paragraphs
 def get_paragraphs(url,min_chars = 100):
-    try:
-        text = Extractor(extractor='KeepEverythingExtractor', url=url).getText().split('\n')
-        pars = [par for par in text if len(par)>min_chars]
-    except Exception as e:
-        return []
-    return pars
+    status, html = get_html(url)
+    if not status:
+        return False, 'html scrape failed with error: ' + html
+           
+    soup = BeautifulSoup(html, 'html.parser')
+    texts = soup.findAll(text=True) #This is a list
+    policy = [remove_format(string) for string in filter(tag_visible, texts)]
+    policy = list(filter(None, policy))
+    policy = [par for par in policy if len(par)>min_chars]
+
+    return True, policy
+
+# filter for visible HTML tags
+def tag_visible(element):
+    if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]', 'option']:
+        return False
+    if isinstance(element, Comment):
+        return False
+    return True
+
+# remove whitespace and formatting from a string
+def remove_format(string):
+    newstr = string.strip()
+    newstr = newstr.replace('\n', ' ').replace('\r', '').replace("\t", " ")
+    newstr = re.sub('\s\s+',' ',newstr)
+    return newstr
 
 # tokenize a string
 def get_tokens(string):
@@ -85,8 +108,6 @@ def get_tokens(string):
     tokens = word_tokenize(newstr)
     # remove stop words
     tokens = [word.lower() for word in tokens if not word.lower() in stopwords.words('english')]
-    # remove non english words -- removed because enchant does not work with binder -- TODO bring back?  
-#     tokens = [word for word in tokens if english_dict.check(word)]
     return tokens
 
 # lemmatize list of tokens

@@ -1,10 +1,8 @@
 # The Market for Data Privacy: Data and Code
 
-### by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther (Imperial College London)
+### by Tarun Ramadorai, Antoine Uettwiller and Ansgar Walther (Imperial College London), in collaboration with Michelle Lee (University of Oxford)
 
 This repo contains the data and code used for [our research paper](https://www.ssrn.com/abstract=3352175).
-
-If you use these resources in your own work, please cite us (bibtex below).
 
 We welcome any suggestions on how to improve our approach! You can contact us at: a.walther@imperial.ac.uk
 
@@ -74,6 +72,8 @@ where you need to replace "DIR" with the local path into which you've cloned the
 
 
 ## Citation
+
+If you use these resources in your own work, please cite us (bibtex below).
 
 ```
 @article{ramadorai2019market,
